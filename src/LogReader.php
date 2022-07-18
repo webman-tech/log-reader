@@ -39,7 +39,7 @@ class LogReader
             Route::get('/tail', [LogReaderController::class, 'tail']);
             Route::get('/download', [LogReaderController::class, 'download']);
             Route::get('/delete', [LogReaderController::class, 'delete']);
-        });
+        })->middleware($config['middleware'] ?? []);
     }
 
     /**
