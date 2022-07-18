@@ -1,4 +1,4 @@
 <?php
 return [
-    'enable' => true,
+    'enable' => config('app.debug', false),
 ];

@@ -13,7 +13,7 @@ return [
      * @see Kriss\LogReader\LogReader
      */
     // 是否允许删除
-    'deleteEnable' => true,
+    'deleteEnable' => config('app.debug', false),
     // 日志根路径
     'logPath' => runtime_path() . '/logs',
     // tail 查看时默认读取的行大小
