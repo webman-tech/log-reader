@@ -4,7 +4,8 @@
   "license": "MIT",
   "description": "Webman plugin kriss/webman-log-reader",
   "require": {
-    "php": ">=7.4"
+    "php": ">=7.4",
+    "kriss/log-reader": "^1.2"
   },
   "config": {
     "sort-packages": true
@@ -13,5 +14,8 @@
     "psr-4": {
       "Kriss\\WebmanLogReader\\": "src"
     }
+  },
+  "require-dev": {
+    "workerman/webman-framework": "^1.3"
   }
 }
