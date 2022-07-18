@@ -1,0 +1,17 @@
+{
+  "name": "kriss/webman-log-reader",
+  "type": "library",
+  "license": "MIT",
+  "description": "Webman plugin kriss/webman-log-reader",
+  "require": {
+    "php": ">=7.4"
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "autoload": {
+    "psr-4": {
+      "Kriss\\WebmanLogReader\\": "src"
+    }
+  }
+}
