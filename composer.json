@@ -5,7 +5,7 @@
   "description": "Webman plugin kriss/webman-log-reader",
   "require": {
     "php": ">=7.4",
-    "kriss/log-reader": "^1.2"
+    "kriss/log-reader": "^1.3"
   },
   "config": {
     "sort-packages": true

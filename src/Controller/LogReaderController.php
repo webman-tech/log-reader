@@ -35,7 +35,7 @@ class LogReaderController extends SymfonyResponseLogReaderController
         if ($originHeaders = $symfonyResponse->headers->all()) {
             foreach ($originHeaders as $key => $value) {
                 $key = implode('-', array_map('ucfirst', explode('-', $key)));
-                $headers[$key] = $value;
+                $headers[$key] = is_array($value) ? $value[0] : $value;
             }
         }
 
