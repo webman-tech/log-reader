@@ -8,7 +8,10 @@ use Webman\Route;
 
 class LogReader
 {
-    protected static ?PhpLogReader $_instance = null;
+    /**
+     * @var null|PhpLogReader
+     */
+    protected static $_instance = null;
 
     public static function instance(): PhpLogReader
     {
