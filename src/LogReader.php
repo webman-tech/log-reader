@@ -1,9 +1,9 @@
 <?php
 
-namespace Kriss\WebmanLogReader;
+namespace WebmanTech\LogReader;
 
 use Kriss\LogReader\LogReader as PhpLogReader;
-use Kriss\WebmanLogReader\Controller\LogReaderController;
+use WebmanTech\LogReader\Controller\LogReaderController;
 use Webman\Route;
 
 class LogReader
@@ -13,7 +13,7 @@ class LogReader
     public static function instance(): PhpLogReader
     {
         if (!static::$_instance) {
-            $config = config('plugin.kriss.webman-log-reader.log-reader', []);
+            $config = config('plugin.webman-tech.log-reader.log-reader', []);
             static::$_instance = static::createLogReader($config);
         }
         return static::$_instance;
@@ -30,7 +30,7 @@ class LogReader
 
     public static function registerRoute(): void
     {
-        $config = config('plugin.kriss.webman-log-reader.log-reader.route', []);
+        $config = config('plugin.webman-tech.log-reader.log-reader.route', []);
 
         Route::group($config['group'] ?? '', function () {
             Route::get('', [LogReaderController::class, 'index']);

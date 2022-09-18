@@ -1,10 +1,10 @@
 <?php
 
-namespace Kriss\WebmanLogReader\Controller;
+namespace WebmanTech\LogReader\Controller;
 
 use Kriss\LogReader\LogReader as PhpLogReader;
 use Kriss\LogReader\Traits\LogReaderControllerTrait;
-use Kriss\WebmanLogReader\LogReader;
+use WebmanTech\LogReader\LogReader;
 use Symfony\Component\HttpFoundation\HeaderBag;
 use Symfony\Component\HttpFoundation\Request as SymfonyRequest;
 
@@ -38,6 +38,6 @@ class SymfonyResponseLogReaderController
 
     protected function getBaseUrl(): string
     {
-        return config('plugin.kriss.webman-log-reader.log-reader.route.group', '');
+        return config('plugin.webman-tech.log-reader.log-reader.route.group', '');
     }
 }

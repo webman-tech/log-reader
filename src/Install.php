@@ -1,5 +1,5 @@
 <?php
-namespace Kriss\WebmanLogReader;
+namespace WebmanTech\LogReader;
 
 class Install
 {
@@ -9,7 +9,7 @@ class Install
      * @var array
      */
     protected static $pathRelation = array (
-  'config/plugin/kriss/webman-log-reader' => 'config/plugin/kriss/webman-log-reader',
+  'config/plugin/webman-tech/log-reader' => 'config/plugin/webman-tech/log-reader',
 );
 
     /**

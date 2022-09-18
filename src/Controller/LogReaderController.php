@@ -1,6 +1,6 @@
 <?php
 
-namespace Kriss\WebmanLogReader\Controller;
+namespace WebmanTech\LogReader\Controller;
 
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
 use Symfony\Component\HttpFoundation\Response as SymfonyResponse;
