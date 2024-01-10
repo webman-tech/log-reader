@@ -38,6 +38,11 @@ class SymfonyResponseLogReaderController
 
     protected function getBaseUrl(): string
     {
-        return config('plugin.webman-tech.log-reader.log-reader.route.group', '');
+        $urlMaker = config('plugin.webman-tech.log-reader.log-reader.route.url_maker');
+        $url = config('plugin.webman-tech.log-reader.log-reader.route.group', '');
+        if (is_callable($urlMaker)) {
+            $url = $urlMaker($url);
+        }
+        return $url;
     }
 }
