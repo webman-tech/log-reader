@@ -27,7 +27,7 @@ class LogReader
     {
         $logPath = $config['logPath'] ?? runtime_path() . '/logs';
         unset($config['logPath']);
-        $config['enable'] = $config['enable'] ?? true;
+        $config['enable'] ??= true;
 
         return new PhpLogReader($logPath, $config);
     }
@@ -36,7 +36,7 @@ class LogReader
     {
         $config = (array)ConfigHelper::get('log-reader.route', []);
 
-        Route::group((string)($config['group'] ?? ''), function () {
+        Route::group((string)($config['group'] ?? ''), function (): void {
             Route::get('', [LogReaderController::class, 'index']);
             Route::get('/index', [LogReaderController::class, 'index']);
             Route::get('/view', [LogReaderController::class, 'view']);
