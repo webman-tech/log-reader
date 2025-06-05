@@ -47,11 +47,9 @@ class LogReader
     }
 
     /**
-     * @param $name
-     * @param $arguments
      * @return mixed
      */
-    public static function __callStatic($name, $arguments)
+    public static function __callStatic(string $name, array $arguments)
     {
         return static::instance()->{$name}(... $arguments);
     }

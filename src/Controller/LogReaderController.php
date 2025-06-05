@@ -8,22 +8,22 @@ use Webman\Http\Response;
 
 class LogReaderController extends SymfonyResponseLogReaderController
 {
-    public function view()
+    public function view(): Response
     {
         return $this->transSymfonyResponse(parent::view());
     }
 
-    public function tail()
+    public function tail(): Response
     {
         return $this->transSymfonyResponse(parent::tail());
     }
 
-    public function download()
+    public function download(): Response
     {
         return $this->transSymfonyResponse(parent::download());
     }
 
-    public function delete()
+    public function delete(): Response
     {
         return $this->transSymfonyResponse(parent::delete());
     }
