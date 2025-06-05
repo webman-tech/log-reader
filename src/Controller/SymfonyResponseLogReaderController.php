@@ -29,24 +29,24 @@ class SymfonyResponseLogReaderController
         }
 
         $symfonyRequest = new SymfonyRequest(
-            $request->get(),
-            $request->post(),
+            (array)$request->get(),
+            (array)$request->post(),
             [],
-            $request->cookie(),
+            (array)$request->cookie(),
             [],
             [],
             $request->rawBody()
         );
-        $symfonyRequest->headers = new HeaderBag($request->header());
+        $symfonyRequest->headers = new HeaderBag((array)$request->header());
         return $symfonyRequest;
     }
 
     protected function getBaseUrl(): string
     {
         $urlMaker = ConfigHelper::get('log-reader.route.url_maker');
-        $url = ConfigHelper::get('log-reader.route.group', '');
+        $url = (string)ConfigHelper::get('log-reader.route.group', '');
         if (is_callable($urlMaker)) {
-            $url = $urlMaker($url);
+            $url = (string)$urlMaker($url);
         }
         return $url;
     }

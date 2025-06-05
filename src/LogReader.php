@@ -17,7 +17,7 @@ class LogReader
     public static function instance(): PhpLogReader
     {
         if (!static::$_instance) {
-            $config = ConfigHelper::get('log-reader', []);
+            $config = (array)ConfigHelper::get('log-reader', []);
             static::$_instance = static::createLogReader($config);
         }
         return static::$_instance;
@@ -34,9 +34,9 @@ class LogReader
 
     public static function registerRoute(): void
     {
-        $config = ConfigHelper::get('log-reader.route', []);
+        $config = (array)ConfigHelper::get('log-reader.route', []);
 
-        Route::group($config['group'] ?? '', function () {
+        Route::group((string)($config['group'] ?? ''), function () {
             Route::get('', [LogReaderController::class, 'index']);
             Route::get('/index', [LogReaderController::class, 'index']);
             Route::get('/view', [LogReaderController::class, 'view']);
