@@ -40,7 +40,7 @@ class LogReaderController extends SymfonyResponseLogReaderController
             }
         }
 
-        $response = response($symfonyResponse->getContent())
+        $response = response($symfonyResponse->getContent() ?: '')
             ->withStatus($symfonyResponse->getStatusCode(), SymfonyResponse::$statusTexts[$symfonyResponse->getStatusCode()] ?? '')
             ->withHeaders($headers);
         if ($symfonyResponse instanceof BinaryFileResponse) {
