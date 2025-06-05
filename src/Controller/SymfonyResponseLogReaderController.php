@@ -24,6 +24,10 @@ class SymfonyResponseLogReaderController
     protected function getRequest(): SymfonyRequest
     {
         $request = request();
+        if (!$request) {
+            return new SymfonyRequest();
+        }
+
         $symfonyRequest = new SymfonyRequest(
             $request->get(),
             $request->post(),
