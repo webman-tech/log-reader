@@ -13,6 +13,7 @@
   },
   "require": {
     "php": "^8.2",
-    "kriss/log-reader": "^1.3"
+    "kriss/log-reader": "^1.3",
+    "webman-tech/common-utils": "^1.0 || dev-main"
   }
 }
