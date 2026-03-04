@@ -27,7 +27,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `copy/config/plugin/`：配置文件模板
 - `src/Install.php`：Webman 安装脚本
 
-测试文件位于项目根目录的 `tests/Unit/LogReader/`。
+测试文件位于项目根目录的 `tests/Unit/LogReader/`。测试环境配置和 Helper 函数详见根目录 [CLAUDE.md](../../CLAUDE.md) 的测试相关章节。
 
 ## 代码风格
 
@@ -39,4 +39,3 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 2. **日志路径**：确保日志文件路径可读
 3. **大文件**：大日志文件可能影响性能
 4. **安全考虑**：生产环境应关闭此功能
-5. **测试位置**：单元测试在项目根目录的 `tests/Unit/LogReader/` 下，而非包内
