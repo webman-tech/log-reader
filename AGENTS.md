@@ -22,6 +22,21 @@
 
 测试文件位于项目根目录的 `tests/Unit/LogReader/`。测试环境配置和 Helper 函数详见根目录 [AGENTS.md](../../AGENTS.md) 的测试相关章节。
 
+## 工作流程
+
+```
+浏览器访问 /log-reader
+    │
+    ▼
+LogReaderController
+    │
+    ▼
+LogReader (php-log-reader)
+    │
+    ▼
+读取日志文件 ──→ Web 界面展示 (分页 / 过滤 / 实时)
+```
+
 ## 代码风格
 
 与根项目保持一致，详见根目录 [AGENTS.md](../../AGENTS.md)。
