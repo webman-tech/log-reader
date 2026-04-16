@@ -12,15 +12,12 @@
 
 测试、静态分析等通用命令与根项目一致，详见根目录 [AGENTS.md](../../AGENTS.md)。
 
-## 项目架构
-
-### 核心组件
-- **Controller**：日志阅读控制器
-- **LogReader**：日志读取器
-
-### 目录结构
-- `src/`：源代码
-- `copy/config/plugin/`：配置文件模板
+## 目录结构
+- `src/`：
+  - `LogReader.php`：日志读取核心类
+  - `Controller/`：日志阅读控制器（支持 Webman 原生响应和 Symfony 响应两种实现）
+  - `Helper/`：ConfigHelper
+- `copy/`：配置文件模板
 - `src/Install.php`：Webman 安装脚本
 
 测试文件位于项目根目录的 `tests/Unit/LogReader/`。测试环境配置和 Helper 函数详见根目录 [AGENTS.md](../../AGENTS.md) 的测试相关章节。
